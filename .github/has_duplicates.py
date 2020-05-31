@@ -3,4 +3,5 @@ def has_duplicates(t):
         t_copy = t + []
         t_copy.remove(x)
         for y in t_copy :
-            if x == y:
+            return x == y
+                
