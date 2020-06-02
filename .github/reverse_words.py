@@ -1,11 +1,12 @@
 def reverse_words():
     ‘’‘反转词对’‘’
     fin = open('words.txt')
-    for x in fin:
-        word = list(x.strip())
-        word_reverse = word[::-1]
-        for y in fin:
-            word_chk = list(y.strip())
-            if word_chk == word_reverse:
-                print(x.strip(),y.strip())
+    words_list =[]
+    for i in fin:
+        words_list.append(i.strip())
+    for x in words_list:
+        for y in words_list:
+            if list(y) == list(x)[::-1]:
+                print(x,y)
     fin.close()
+
