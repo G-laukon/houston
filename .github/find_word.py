@@ -1,5 +1,7 @@
-def find(word,letter,index):
+def find(word,letter):
+    '''给定单词与字母，计算字母出现频率与位置'''
     count = 0
+    index = 0
     while True :
         while index == len(word):
             if count == 0:
