@@ -1,4 +1,5 @@
 def reverse_words():
+    ‘’‘反转词对’‘’
     fin = open('words.txt')
     for x in fin:
         word = list(x.strip())
