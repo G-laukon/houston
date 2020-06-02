@@ -11,7 +11,6 @@ def find(word,letter):
         if word[index] == letter:
             count = count + 1
             print(index)     
-
         index = index + 1
   
 
