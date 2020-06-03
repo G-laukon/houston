@@ -1,5 +1,5 @@
 def reverse_words():
-    ‘’‘反转词对’‘’
+    ‘’‘反转词对,for语句循环遍历’‘’
     fin = open('words.txt')
     words_list =[]
     for i in fin:
