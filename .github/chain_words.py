@@ -1,21 +1,19 @@
 def chain_words():
-'''检索连锁词'''
-    fin = open('words_test.txt')
+    fin = open('words.txt')
     words_list =[]
     for i in fin:
         words_list.append(i.strip())
     fin.close()
-    for word in words_list:
-        letter= list(word)
-        x= letter[::2]
-        y= letter[1::2]
-        if in_bisect(words_list,x) == True and in_bisect(words_list,y)==True            
-            print(word,''join(x),''join(y))
-        
-       
+    for word in words_list:       
+        if len(word) > 1:
+            x= word[::2]
+            y= word[1::2]
+            if in_bisect(words_list,x) == True and in_bisect(words_list,y) == True:
+                print(word,x,y)
+     
             
 def in_bisect(words,word):
-    words_copy =[]+ words
+    words_copy =[]+ words   
     m = int(len(words_copy))
     while m > 1:
         if len(words_copy)%2 == 1:
