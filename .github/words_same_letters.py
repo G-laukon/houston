@@ -13,7 +13,7 @@ def words_same_letters():
         w = [x]
         for y in t:
             if t[x] == t[y] and x !=y :
-                w = w + [y]
+                w = [y] + w
                 words_sld[t[x]] = w
         w = []
             
