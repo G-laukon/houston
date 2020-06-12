@@ -1,6 +1,6 @@
 def in_bisect(words,word):
-    ‘’‘给定一元素为升序排列的列表，计算给定参数插入位置’‘’
-    words_copy =[]+ words
+    ‘’‘给定元素为升序排列的列表，计算给定参数插入位置’‘’
+    words_copy = words[:]
     words_copy.sort()   
     if words != words_copy:
         return None
