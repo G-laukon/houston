@@ -19,6 +19,6 @@ def words_same_letters():
         
     for m in s:
         if len(s[m])> 1:        # 剔除没有异形词的项
-            words_sld.setdefault(m,s[m]) # for 语句内好像不能删除字典项，只能生成新的字典s
+            words_sld.setdefault(m,s[m]) # for 语句内好像不能删除字典项，只能生成新的字典
 
     return words_sld
