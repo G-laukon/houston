@@ -9,5 +9,5 @@ def most_frequent(text):
         n = n + list([x[::-1]])
 
     n.sort(reverse= True)
-    for y in n:
-        print(y)
+    for seq,letter in n:
+        print(letter,seq)
