@@ -12,10 +12,10 @@ def words_same_letters():
         
     fin.close()
     
-    for key in t:       
-        if t[key] in s:
-            s[t[key]].append(key)
-        s.setdefault(t[key],[key])
+    for k in t:       
+        if t[k] in s:
+            s[t[k]].append(k)
+        s.setdefault(t[k],[k])
         
     for m in s:
         if len(s[m])> 1:
