@@ -1,5 +1,7 @@
 def words_same_letters():
-'''效率更高异位构词'''
+'''效率更高的异位构词
+   words_sld:异位构词字典
+'''
     fin = open('words.txt')
     t = dict()
     s = dict()
@@ -13,7 +15,7 @@ def words_same_letters():
         if t[key] in s:
             s[t[key]].append(key)
         s.setdefault(t[key],[key])
-
+        
     for m in s:
         if len(s[m])> 1:
             words_sld.setdefault(m,s[m])
