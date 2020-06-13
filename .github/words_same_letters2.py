@@ -1,3 +1,4 @@
+words_sld = dict()
 def words_same_letters():
 '''效率更高的异位构词
    words_sld:异位构词字典
@@ -5,7 +6,7 @@ def words_same_letters():
     fin = open('words.txt')
     t = dict()
     s = dict()
-    words_sld = dict()
+    
     for word in fin:
         t[word.strip()] = tuple(sorted(word.strip()))
         
