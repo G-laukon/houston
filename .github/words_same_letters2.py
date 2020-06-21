@@ -8,7 +8,7 @@ def words_same_letters():
     s = dict()
     
     for word in fin:
-        t[word.strip()] = tuple(sorted(word.strip()))   #单词的字母生序排列生成元组储存为值
+        t[word.strip()] = tuple(sorted(word.strip()))   #单词的字母升序排列，生成元组
         
     fin.close()
     
