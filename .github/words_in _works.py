@@ -6,13 +6,17 @@ def make_split():
     for line in fin:
         line = line.lower()
         for i in line:
-            if i in string.punctuation:
-                line = line.replace(i,' ')
-                print(line)
-                words = line.split()
-                print(words)
-                for word in words:
-                    d[word] = d.setdefault(word,0)+ 1
+            for i in string.punctuation:
+                while i in line:
+                
+                    line = line.replace(i,' ')
+
+                
+        words = line.split()
+                
+                
+        for word in words:
+            d[word] = d.setdefault(word,0)+ 1
     fin.close()
     return d
 
