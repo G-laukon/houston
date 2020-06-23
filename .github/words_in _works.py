@@ -7,8 +7,10 @@ def make_split():
         line = line.lower()
         for i in line:
             if i in string.punctuation:
-                line = line.replace(i,' ')           
+                line = line.replace(i,' ')
+                print(line)
                 words = line.split()
+                print(words)
                 for word in words:
                     d[word] = d.setdefault(word,0)+ 1
     fin.close()
@@ -29,6 +31,26 @@ def print_words(words_dict):
     for n,word in res[0:20]:
         print(word,n)
 
+def print_no_words(words_dict):
+    d = words_dic()
+    print('\n')
+    print('Words not in dictionary')
+    print('\n')
+    for i in words_dict:
+        if i not in d:
+            print(i)
+    
+
+def words_dic():  
+    words_d = dict()
+    fin = open('words.txt')
+    for word in fin:
+        if word not in words_d:
+            words_d[word.strip()]= 1
+    fin.close()
+    return words_d
+
 if __name__ == '__main__':
     words_dict = make_split()
     print_words(words_dict)
+    print_no_words(words_dict)
