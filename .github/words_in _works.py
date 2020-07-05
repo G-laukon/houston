@@ -23,8 +23,10 @@ def skip_gutenberg(filename):
 
 def process_line(line,d):
 #    line = line.replace('-', ' ')
+#25为与#36联合使用的码
 
     for i in line:
+        #迭代直到剔除所有标点符号
         for i in string.punctuation:
             while i in line:
                 line = line.replace(i,' ')
@@ -33,6 +35,7 @@ def process_line(line,d):
         word = word.lower()
         
 #        word = word.strip(string.punctuation + string.whitespace)
+##36给出的方法无法完全剔除punctuation 
        
         d[word] = d.setdefault(word,0)+ 1
     return d
