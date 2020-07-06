@@ -43,8 +43,6 @@ def main():
     filename = input('Filename:')
     n = int(input('Prefix words number:'))
     d = anylise(filename,n)
-    d.sorted()
-    print
 
     
 if __name__ == '__main__':
