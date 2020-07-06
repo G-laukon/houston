@@ -1,49 +1,43 @@
 import string
 import random
 
-def anylise(filename):    
+def anylise(filename,n):    
     fin = open(str(filename))
+    s = []
     hist = {}
-    d = {}
+    val = {}
     for line in fin:
         if line.startswith('*** START OF THIS'):
-            break
-        
+            break       
     for line in fin:
         if line.startswith('*** END OF THIS'):
             break       
-        hist = process_line(line,hist)
+        t = process_line(line)
+        u = s + t 
+        while len(u) > n:
+            key = tuple(u[:n])
+            val[u[n]] = val.setdefault(u[n],0)+ 1
+            hist[key] = val
+            u = u[1:]
+        s = u               
     fin.close()
-    
-    d2 = words_dic()
-    for i in hist:       
-        if i in d2:
-            d[i] = hist[i]
-    return d
+    return hist
 
 def process_line(line):
     for i in line:
         for i in string.punctuation:
             while i in line:
-                line = line.replace(i,' ')
-                    
+                line = line.replace(i,' ')                   
     line = line.lower()
-    line = line.split():      
+    line = line.split()      
     return line
 
+def main():
+    filename = input('Filename:')
+    n = int(input('Prefix words number:'))
+    d = anylise(filename,n)
+    print(d)
 
-def prefix_words(line,n)
-    s = []
-    t = line[:]
-    u = s + t
-    memo = {}
-    val = {}
-    while len(u)> n:
-        key = tuple(u[:n])
-        val = val.setdefault(u[n],0)+ 1
-        memo[key] = val
-        u = u[1:]
-
-    s = u
-
-    return memo
+    
+if __name__ == '__main__':
+    main()
