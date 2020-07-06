@@ -1,7 +1,7 @@
 import string
 import random
 
-def anylise(filename,n):    
+def analysis(filename,n):    
     fin = open(str(filename))
     s = []
     hist = {}
