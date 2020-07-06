@@ -99,9 +99,9 @@ def print_words(d,m = 10):
 
 def main():
     filename = input('Filename:')
+    m = int(input('Printed words number(default 10):'))
     d = skip_gutenberg(filename)
-
-    print_words(d)
+    print_words(d,m)
     
 if __name__ == '__main__':
     main()
