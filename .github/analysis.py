@@ -15,7 +15,7 @@ def analysis(filename,n):
             break       
         t = process_line(line)
         u = s + t
-        val = {}
+    
         while len(u) > n:
             key = tuple(u[:n]) 
             if key in hist:
