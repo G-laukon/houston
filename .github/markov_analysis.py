@@ -6,6 +6,8 @@ def skip_gutenberg_header(filename,n=2):
     s = []
     hist = {}  
    
+    skip_header(fin)
+    
     for line in fin:
         skip_header(line)
         if line.startswith('*** END OF THIS'):
@@ -18,9 +20,10 @@ def skip_gutenberg_header(filename,n=2):
     fin.close()
     return hist
 
-def skip_header(line):
-    if line.startswith('*** START OF THIS'):
-        breaks
+def skip_header(fin):
+    for line in fin:
+        if line.startswith('*** START OF THIS'):
+            breaks
 
 def process_line(line):
     for i in line:
